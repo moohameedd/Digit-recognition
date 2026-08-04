@@ -3,6 +3,12 @@ const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 let isDrawing = false;
 
+const predictBtn = document.getElementById('predictBtn');
+const clearBtn = document.getElementById('clearBtn');
+
+predictBtn.addEventListener('click', predict);
+clearBtn.addEventListener('click', clearCanvas);
+
 // 1. Initialize Canvas Background & Settings
 function initCanvas() {
     // Fill background with solid black (MNIST format)
